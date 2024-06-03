@@ -1,5 +1,5 @@
 # Goat WGS imputation
-Goat imputation pipeline development using whole genome sequence data of 1,372 diverse goat population (https://www.goatgenome.org/) as a reference population with Beagle 5.3
+Goat imputation pipeline development using whole genome sequence data of 1,372 diverse goat population (https://www.goatgenome.org/) as a reference population with Beagle 5.3 (https://faculty.washington.edu/browning/beagle/b5_3.html)
 
 
 **Data and analysis summary**
