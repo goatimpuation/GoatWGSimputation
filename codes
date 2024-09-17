@@ -11,7 +11,6 @@ Cross-Validation: Mask known genotypes and impute them to evaluate how well impu
 INFO Score: Use INFO scores provided by Beagle to evaluate the quality of imputation
 Plot Metrics: Visualize R² or INFO scores to assess overall imputation quality
 ****
-
 # Using python to visualize the R square values from Beagle .vstat file
 import pandas as pd
 import matplotlib.pyplot as plt
