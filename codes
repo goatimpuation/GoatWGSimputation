@@ -21,7 +21,5 @@ vstat_data = pd.read_csv('imputed_output.vstat', sep='\t')
 plt.hist(vstat_data['R2'], bins=50, edgecolor='black')
 plt.xlabel('Imputation R² Value')
 plt.ylabel('Number of Variants')
-
 plt.title('Distribution of Imputation R² Values')
-
 plt.show()
