@@ -1,1 +1,27 @@
+# convert your SNP file [map and ped or other formats to vcf file, plink is preferred, details here (will be updated)]
+# Without phasing
+java -Xmx4g -jar beagle.jar gt=target_snp_data.vcf ref=wgs_reference.vcf out=imputed_output
+# With phasing
+java -Xmx4g -jar beagle.jar gt=target_snp_data.vcf ref=wgs_reference.vcf phase=true out=imputed_output
 
+****Imputation Accuracy:
+True Genotypes Comparison: Compare imputed genotypes to true genotypes to compute concordance
+Allelic R²: Use the R² value to assess imputation quality for each variant
+Cross-Validation: Mask known genotypes and impute them to evaluate how well imputation works
+INFO Score: Use INFO scores provided by Beagle to evaluate the quality of imputation
+Plot Metrics: Visualize R² or INFO scores to assess overall imputation quality
+****
+
+# Using python to visualize the R square values from Beagle .vstat file
+import pandas as pd
+import matplotlib.pyplot as plt
+# Load the .vstat file ( tab-delimited)
+vstat_data = pd.read_csv('imputed_output.vstat', sep='\t')
+# Plot the distribution of R² values
+plt.hist(vstat_data['R2'], bins=50, edgecolor='black')
+plt.xlabel('Imputation R² Value')
+plt.ylabel('Number of Variants')
+
+plt.title('Distribution of Imputation R² Values')
+
+plt.show()
